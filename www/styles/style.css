@@ -1,5 +1,10 @@
-@import 'normalize.css';
+/* @import 'normalize.css'; */
 
-h1 {
-    color: red;
+
+body {
+    background: linear-gradient(to top right, #0ccda3, #c1fcd3);
+    
 }
+    h1 {
+        color: red;
+    }
