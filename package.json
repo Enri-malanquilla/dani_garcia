@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio-2",
+  "version": "1.0.0",
+  "description": "Intentar reproducir de la forma más fiel posible la imagen proporcionada en esta carpeta. Con la estructura más semántica posible.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --files 'www' --server 'www'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
