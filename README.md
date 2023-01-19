@@ -1,11 +1,8 @@
-# Entrega
+Prueba para GRUPO DANI GARCÍA.
 
-Intentar reproducir de la forma más fiel posible la imagen proporcionada en esta carpeta. Con la estructura más semántica posible.
+Para el funcionamiento
 
-- Se debe utilizar ```@import``` para importar normalize.css
-- Se debe buscar la fuente online y añadirla usando ```@font-face``` (AmaticSC)
-- La navegacion debe estar `fixed`
-- Por lo menos se debe usar alguna vez ```flex```
+1. Instalar node modules en la carpeta donde esta el package.json
+   con el comando 'npm i'.
 
-- (EXTRA!!) Usar animaciones y/o transiciones
-- (EXTRA!!) Usar @media (media queries para el responsive)
+2. Introducir comando 'npm start' en la terminal, desde el archivo dani_garcia.
