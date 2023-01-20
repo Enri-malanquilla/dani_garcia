@@ -4,7 +4,7 @@ const catFactsQuery = async () => {
   try {
     //Conecto con la API catfact y recibo un dato aleatorio sobre gatos.
     const responseCatFact = await fetch(
-      'https://catfact.ninja/fact?max_length=64'
+      'https://catfact.ninja/fact?max_length=1000'
     );
     const { fact } = await responseCatFact.json();
 
