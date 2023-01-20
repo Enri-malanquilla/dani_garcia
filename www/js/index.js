@@ -37,3 +37,15 @@ const catFactsQuery = async () => {
 };
 
 catFactsQuery();
+
+//Seleccionamos el botón donde se hará el evento
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+  //Borramos el interior del article
+  const articleMain = document.querySelector('article');
+  articleMain.innerHTML = '';
+
+  //Llamamos de nuevo a la función catFactsQuery
+  catFactsQuery();
+});
