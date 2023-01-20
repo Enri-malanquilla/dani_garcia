@@ -32,7 +32,10 @@ const catFactsQuery = async () => {
     <h2>${fact}</h2>    
     `;
   } catch (error) {
-    console.log('error en la api gatos');
+    const articleMain = document.querySelector('article');
+    articleMain.innerHTML = `
+    <h2>No se ha encontrado la imagen adecuada, presiona el botón</h2>    
+    `;
   }
 };
 
