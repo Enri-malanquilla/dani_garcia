@@ -67,6 +67,8 @@ div {
 }
 
 button, select {
+    max-width: 200px;
+    text-overflow: ellipsis;
     border: none;
     padding: 12px 24px;
     border-radius: 24px;

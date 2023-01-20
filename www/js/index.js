@@ -102,10 +102,30 @@ const selectCat = async (limit = 10) => {
     }
 
     selectFact.append(frag);
-
-    console.log(data);
   } catch (error) {
     console.log('error');
   }
 };
 selectCat();
+
+/***********************************************
+    Introducimos datos del select
+    ************************************************/
+
+//Añadimos el evento al Select
+selectFact.addEventListener('change', async (e) => {
+  //Borramos html del nodo article
+  const articleMain = document.querySelector('article');
+  articleMain.innerHTML = '';
+  //Llamamos a la API giphy
+  const imageGiphyCatFacts = await queryGiphy(
+    formatSearchGiphy(e.target.value)
+  );
+
+  //Añadimos el HTML al DOM
+  articleMain.innerHTML = `
+          ${imageGiphyCatFacts}
+
+            <h2>${e.target.value}</h2>    
+            `;
+});
