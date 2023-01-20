@@ -56,7 +56,6 @@ const catFactsQueryRandom = async () => {
     ${imageGiphyCatFacts}
     <h2>${fact}</h2>    
     `;
-    return fact;
   } catch (error) {
     const articleMain = document.querySelector('article');
     articleMain.innerHTML = `
@@ -83,11 +82,30 @@ button.addEventListener('click', () => {
 //Seleccionamos el nodo del select
 
 const selectFact = document.getElementById('fact-select');
-
+const frag = new DocumentFragment();
 //Llamamos a la API
 
-const selectCat = async () => {
-  //const optionsFact = await catFactsQuery(20);
-  // console.log(optionsFact);
+const selectCat = async (limit = 10) => {
+  try {
+    //Conecto con la API catfact y recibo varios datos, pondré 10 por defecto sobre gatos.
+    const responseCatFact = await fetch(
+      `https://catfact.ninja/facts?max_length=500&limit=${limit}`
+    );
+    const { data } = await responseCatFact.json();
+    // Recorremos el array de usuarios.
+    for (const cat of data) {
+      const catOption = document.createElement('option');
+      catOption.setAttribute('value', `${cat.fact}`);
+      catOption.innerText = `${cat.fact}`;
+      // Insertamos el option en el select las demás etiquetas.
+      frag.append(catOption);
+    }
+
+    selectFact.append(frag);
+
+    console.log(data);
+  } catch (error) {
+    console.log('error');
+  }
 };
 selectCat();
