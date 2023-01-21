@@ -7,6 +7,8 @@ Para el funcionamiento
 
 2. Introducir comando 'npm start' en la terminal, desde la carpeta dani_garcia.
 
+3. Si es necesario puedo hacer un deploy con github pages.
+
 App
 
 1. Existen dos botones, en uno te elige un dato aleatorio con un máximo de 500 caracteres, en
