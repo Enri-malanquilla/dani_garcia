@@ -16,7 +16,7 @@ body {
 }
 
 .form-section {
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     align-items: baseline; 
@@ -54,12 +54,15 @@ img {
 
 h2 {
     margin-left: 10px;
+    text-align: center;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(255, 255, 255, 0.98);
     font-size: 0.8rem;
     line-height: 150%;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
 
 }
 div {
@@ -67,7 +70,7 @@ div {
 }
 
 button, select {
-    max-width: 200px;
+    width: 200px;
     text-overflow: ellipsis;
     border: none;
     padding: 12px 24px;
@@ -89,3 +92,4 @@ button:hover {
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
     transition: all 0.3 ease;
 }
+
